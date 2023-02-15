@@ -7,17 +7,16 @@ public class Window extends JFrame {
 
         this.setTitle("Fun with layouts");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(new Dimension(800,800));
 
-        this.setLayout(new GridLayout());
-
-
-        this.add(LayoutManager);
+        this.setLayout(new GridLayout(3,3));
+        for (int i =0; i<3*3;i++){
+            this.add(new Canvas());
+        }
 
 
 
         this.pack();
         this.setVisible(true);
-    }c
+    }
 
 }
