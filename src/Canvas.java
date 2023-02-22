@@ -2,14 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.Color;
 
     public class Canvas extends JPanel implements MouseListener {
-        Color c1 = Color.red;
-        Color c2 = Color.magenta;
+        Color c1 = Color.getHSBColor(164, 233, 240);
+
+        Color c2 = Color.pink;
         boolean color1 = false;
 
         public Canvas(){
-            this.setBackground(Color.green);
+            this.setBackground(Color.white);
             addMouseListener(this);
             this.setSize(new Dimension(300,300));
         }
@@ -27,7 +29,6 @@ import java.awt.event.MouseListener;
             System.out.println(e.getButton());
             if (e.getButton() == 1 ) {
 
-
                 if (color1) {
                     this.setBackground(c1);
                 } else {
@@ -35,7 +36,7 @@ import java.awt.event.MouseListener;
                 }
                 color1 = !color1;
             }else{
-                this.setBackground(Color.blue);
+                this.setBackground(Color.WHITE);
             }
             repaint();
 
